@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>IE中TerraExplorer控件遮盖页面元素的问题 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="IE中TerraExplorer控件遮盖页面元素的问题在IE中TE控件总是会遮盖html现有的元素,在使用bootstrap，ext等框架时可以并列但是不可以覆盖。目前比较好的解决办法就是使用api提供的的message，但是这样就不能设置样式与自己的web应用风格统一了，还有就是使用iframe。实在不行就要等支持H5的7.0版本发布。123456789101112131415161718192">
+<meta name="keywords" content="skyline,Terraexplorer">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IE中TerraExplorer控件遮盖页面元素的问题">
+<meta property="og:url" content="https://enusune.github.io/2017/05/16/IE中TerraExplorer控件遮盖页面元素的问题/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="IE中TerraExplorer控件遮盖页面元素的问题在IE中TE控件总是会遮盖html现有的元素,在使用bootstrap，ext等框架时可以并列但是不可以覆盖。目前比较好的解决办法就是使用api提供的的message，但是这样就不能设置样式与自己的web应用风格统一了，还有就是使用iframe。实在不行就要等支持H5的7.0版本发布。123456789101112131415161718192">
+<meta property="og:updated_time" content="2017-06-06T12:24:22.493Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="IE中TerraExplorer控件遮盖页面元素的问题">
+<meta name="twitter:description" content="IE中TerraExplorer控件遮盖页面元素的问题在IE中TE控件总是会遮盖html现有的元素,在使用bootstrap，ext等框架时可以并列但是不可以覆盖。目前比较好的解决办法就是使用api提供的的message，但是这样就不能设置样式与自己的web应用风格统一了，还有就是使用iframe。实在不行就要等支持H5的7.0版本发布。123456789101112131415161718192">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://enusune.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-IE中TerraExplorer控件遮盖页面元素的问题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/16/IE中TerraExplorer控件遮盖页面元素的问题/" class="article-date">
+  <time datetime="2017-05-16T14:25:55.000Z" itemprop="datePublished">2017-05-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/skyline/">skyline</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      IE中TerraExplorer控件遮盖页面元素的问题
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="IE中TerraExplorer控件遮盖页面元素的问题"><a href="#IE中TerraExplorer控件遮盖页面元素的问题" class="headerlink" title="IE中TerraExplorer控件遮盖页面元素的问题"></a>IE中TerraExplorer控件遮盖页面元素的问题</h3><p>在IE中TE控件总是会遮盖html现有的元素,在使用bootstrap，ext等框架时可以并列但是不可以覆盖。目前比较好的解决办法就是使用api提供的的message，但是这样就不能设置样式与自己的web应用风格统一了，还有就是使用iframe。实在不行就要等支持H5的7.0版本发布。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;title&gt;skyline示例&lt;/title&gt;</div><div class="line">	&lt;meta charset=&quot;utf-8&quot;&gt;</div><div class="line">	&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">		var path=&quot;D:/a.fly&quot;</div><div class="line">		function loadFlyfile()&#123;</div><div class="line">			globe.Project.Open(path);</div><div class="line">		&#125;</div><div class="line">	&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">	&lt;div id=&quot;map&quot;&gt;</div><div class="line">    	&lt;iframe id = &quot;iframe&quot; src=&quot;/frame.html&quot; style=&quot;z-index:1;position:absolute; width:25%;height:600px;&quot; &gt;&lt;/iframe&gt;</div><div class="line">		&lt;object id=&quot;TerraExplorer3DWindow&quot; classid=&quot;CLSID:3a4f9192-65a8-11d5-85c1-0001023952c1&quot; style=&quot;width:800px;height:600px;&quot;/&gt;</div><div class="line">		&lt;object id=&quot;globe&quot; classid=&quot;clsid: 3A4F9199-65A8-11D5-85C1-0001023952C1&quot; style=&quot;visibility: hidden;&quot; /&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+<p>iframe页面<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;title&gt;iframe&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">	&lt;div style=&quot;width:100%;height:100%;backgroundcolor:red&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://enusune.github.io/2017/05/16/IE中TerraExplorer控件遮盖页面元素的问题/" data-id="cj52gxps70000e8uy28aq0s60" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Terraexplorer/">Terraexplorer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/skyline/">skyline</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/07/09/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/05/14/我的爱可/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">我的爱可</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/skyline/">skyline</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Terraexplorer/">Terraexplorer</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/skyline/">skyline</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/科科/">科科</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Terraexplorer/" style="font-size: 10px;">Terraexplorer</a> <a href="/tags/skyline/" style="font-size: 10px;">skyline</a> <a href="/tags/科科/" style="font-size: 10px;">科科</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/07/09/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/16/IE中TerraExplorer控件遮盖页面元素的问题/">IE中TerraExplorer控件遮盖页面元素的问题</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/14/我的爱可/">我的爱可</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
