@@ -90,16 +90,16 @@
 
 
 
-<meta name="description" content="title: IE中TerraExplorer控件遮盖页面元素的问题date: 2017-05-16 22:25:55categories: “skyline” #文章分類目錄 可以省略tags: #文章標籤 可以省略 - skyline - Terraexplorer  IE中TerraExplorer控件遮盖页面元素的问题在IE中TE控件总是会遮盖html现有的元素,在使用bootstrap">
+<meta name="description" content="title: IE中TerraExplorer控件遮盖页面元素的问题 date: 2017-05-16 22:25:55 categories: “skyline” #文章分類目錄 可以省略 tags: #文章標籤 可以省略 - skyline  - Terraexplorer  IE中TerraExplorer控件遮盖页面元素的问题在IE中TE控件总是会遮盖html现有的元素,在使用boots">
 <meta property="og:type" content="article">
 <meta property="og:title" content="enusune">
 <meta property="og:url" content="https://enusune.github.io/2017/06/06/IE中TerraExplorer控件遮盖页面元素的问题/index.html">
 <meta property="og:site_name" content="enusune">
-<meta property="og:description" content="title: IE中TerraExplorer控件遮盖页面元素的问题date: 2017-05-16 22:25:55categories: “skyline” #文章分類目錄 可以省略tags: #文章標籤 可以省略 - skyline - Terraexplorer  IE中TerraExplorer控件遮盖页面元素的问题在IE中TE控件总是会遮盖html现有的元素,在使用bootstrap">
-<meta property="og:updated_time" content="2017-08-17T12:39:23.606Z">
+<meta property="og:description" content="title: IE中TerraExplorer控件遮盖页面元素的问题 date: 2017-05-16 22:25:55 categories: “skyline” #文章分類目錄 可以省略 tags: #文章標籤 可以省略 - skyline  - Terraexplorer  IE中TerraExplorer控件遮盖页面元素的问题在IE中TE控件总是会遮盖html现有的元素,在使用boots">
+<meta property="og:updated_time" content="2017-08-17T13:19:45.918Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="enusune">
-<meta name="twitter:description" content="title: IE中TerraExplorer控件遮盖页面元素的问题date: 2017-05-16 22:25:55categories: “skyline” #文章分類目錄 可以省略tags: #文章標籤 可以省略 - skyline - Terraexplorer  IE中TerraExplorer控件遮盖页面元素的问题在IE中TE控件总是会遮盖html现有的元素,在使用bootstrap">
+<meta name="twitter:description" content="title: IE中TerraExplorer控件遮盖页面元素的问题 date: 2017-05-16 22:25:55 categories: “skyline” #文章分類目錄 可以省略 tags: #文章標籤 可以省略 - skyline  - Terraexplorer  IE中TerraExplorer控件遮盖页面元素的问题在IE中TE控件总是会遮盖html现有的元素,在使用boots">
 
 
 
@@ -348,40 +348,73 @@
 
       
         <hr>
-<p>title: IE中TerraExplorer控件遮盖页面元素的问题<br>date: 2017-05-16 22:25:55<br>categories: “skyline” #文章分類目錄 可以省略<br>tags: #文章標籤 可以省略</p>
+<p>title: IE中TerraExplorer控件遮盖页面元素的问题</p>
+<p>date: 2017-05-16 22:25:55</p>
+<p>categories: “skyline” #文章分類目錄 可以省略</p>
+<p>tags: #文章標籤 可以省略</p>
 <pre><code>- skyline
+
 - Terraexplorer
 </code></pre><hr>
 <h3 id="IE中TerraExplorer控件遮盖页面元素的问题"><a href="#IE中TerraExplorer控件遮盖页面元素的问题" class="headerlink" title="IE中TerraExplorer控件遮盖页面元素的问题"></a>IE中TerraExplorer控件遮盖页面元素的问题</h3><p>在IE中TE控件总是会遮盖html现有的元素,在使用bootstrap，ext等框架时可以并列但是不可以覆盖。目前比较好的解决办法就是使用api提供的的message，但是这样就不能设置样式与自己的web应用风格统一了，还有就是使用iframe。实在不行就要等支持H5的7.0版本发布。</p>
-<pre><code>&lt;!DOCTYPE html&gt;
+<pre><code>
+&lt;!DOCTYPE html&gt;
+
 &lt;html&gt;
+
 &lt;head&gt;
+
     &lt;title&gt;skyline示例&lt;/title&gt;
+
     &lt;meta charset=&quot;utf-8&quot;&gt;
+
     &lt;script type=&quot;text/javascript&quot;&gt;
+
         var path=&quot;D:/a.fly&quot;
+
         function loadFlyfile(){
+
             globe.Project.Open(path);
+
         }
+
     &lt;/script&gt;
+
 &lt;/head&gt;
+
 &lt;body&gt;
+
     &lt;div id=&quot;map&quot;&gt;
+
         &lt;iframe id = &quot;iframe&quot; src=&quot;/frame.html&quot; style=&quot;z-index:1;position:absolute; width:25%;height:600px;&quot; &gt;&lt;/iframe&gt;
+
         &lt;object id=&quot;TerraExplorer3DWindow&quot; classid=&quot;CLSID:3a4f9192-65a8-11d5-85c1-0001023952c1&quot; style=&quot;width:800px;height:600px;&quot;/&gt;
+
         &lt;object id=&quot;globe&quot; classid=&quot;clsid: 3A4F9199-65A8-11D5-85C1-0001023952C1&quot; style=&quot;visibility: hidden;&quot; /&gt;
+
     &lt;/div&gt;
+
 &lt;/body&gt;
+
 &lt;/html&gt;
 </code></pre><p>iframe页面</p>
-<pre><code>&lt;!DOCTYPE html&gt;
+<pre><code>
+&lt;!DOCTYPE html&gt;
+
 &lt;html&gt;
+
 &lt;head&gt;
+
     &lt;title&gt;iframe&lt;/title&gt;
+
 &lt;/head&gt;
+
 &lt;body&gt;
+
     &lt;div style=&quot;width:100%;height:100%;backgroundcolor:red&quot;&gt;&lt;/div&gt;
+
 &lt;/body&gt;
+
 &lt;/html&gt;
 </code></pre>
       

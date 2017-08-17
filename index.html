@@ -372,14 +372,12 @@
         
           
             <h1 id="Mysql存储过程"><a href="#Mysql存储过程" class="headerlink" title="Mysql存储过程"></a>Mysql存储过程</h1><p>我们平时写的sql语句只能执行一句，所以相应的功能比较少，但是也足以应对大多时候的场景了。而一些更加复杂的场景用sql已经不足以实现功能，就需要使用到存储过程。Mysql也是重5.0版本加入了此功能。我们不仅能操作单个的sql语句，还可以操作更多的sql语句。把用来实现一组关于表的操作的sql语句代码当做一个整体来执行。也是与数据库对象表关联最紧密的数据库对象。在数据库系统中，当调用存储过程和函数的时候，就会执行这些对象中的sql语句组，这样就实现了功能。</p>
-<p>##存储过程的优点：</p>
-<p>(1)增强SQL语言的功能和灵活性：存储过程可以用控制语句编写，有很强的灵活性，可以完成复杂的判断和较复杂的运算。</p>
+<h2 id="存储过程的优点："><a href="#存储过程的优点：" class="headerlink" title="存储过程的优点："></a>存储过程的优点：</h2><p>(1)增强SQL语言的功能和灵活性：存储过程可以用控制语句编写，有很强的灵活性，可以完成复杂的判断和较复杂的运算。</p>
 <p>(2)标准组件式编程：存储过程被创建后，可以在程序中被多次调用，而不必重新编写该存储过程的SQL语句。而且数据库专业人员可以随时对存储过程进行修改，对应用程序源代码毫无影响。</p>
 <p>(3)较快的执行速度：如果某一操作包含大量的Transaction-SQL代码或分别被多次执行，那么存储过程要比批处理的执行速度快很多。因为存储过程是预编译的。在首次运行一个存储过程时查询，优化器对其进行分析优化，并且给出最终被存储在系统表中的执行计划。而批处理的Transaction-SQL语句在每次运行时都要进行编译和优化，速度相对要慢一些。</p>
 <p>(4)减少网络流量：针对同一个数据库对象的操作（如查询、修改），如果这一操作所涉及的Transaction-SQL语句被组织进存储过程，那么当在客户计算机上调用该存储过程时，网络中传送的只是该调用语句，从而大大减少网络流量并降低了网络负载。</p>
 <p>(5)作为一种安全机制来充分利用：通过对执行某一存储过程的权限进行限制，能够实现对相应的数据的访问权限的限制，避免了非授权用户对数据的访问，保证了数据的安全。</p>
-<p>##存储过程和函数的操作：</p>
-<p>(1)创建存储过程和函数</p>
+<h2 id="存储过程和函数的操作："><a href="#存储过程和函数的操作：" class="headerlink" title="存储过程和函数的操作："></a>存储过程和函数的操作：</h2><p>(1)创建存储过程和函数</p>
 <p>MySQL中，创建存储过程的基本形式如下：</p>
 <pre><code>CREATE PROCEDURE sp_name ([proc_parameter[,...]])  
         [characteristic ...] routine_body 
@@ -528,40 +526,73 @@ mysql&gt; DELIMITER ;
         
           
             <hr>
-<p>title: IE中TerraExplorer控件遮盖页面元素的问题<br>date: 2017-05-16 22:25:55<br>categories: “skyline” #文章分類目錄 可以省略<br>tags: #文章標籤 可以省略</p>
+<p>title: IE中TerraExplorer控件遮盖页面元素的问题</p>
+<p>date: 2017-05-16 22:25:55</p>
+<p>categories: “skyline” #文章分類目錄 可以省略</p>
+<p>tags: #文章標籤 可以省略</p>
 <pre><code>- skyline
+
 - Terraexplorer
 </code></pre><hr>
 <h3 id="IE中TerraExplorer控件遮盖页面元素的问题"><a href="#IE中TerraExplorer控件遮盖页面元素的问题" class="headerlink" title="IE中TerraExplorer控件遮盖页面元素的问题"></a>IE中TerraExplorer控件遮盖页面元素的问题</h3><p>在IE中TE控件总是会遮盖html现有的元素,在使用bootstrap，ext等框架时可以并列但是不可以覆盖。目前比较好的解决办法就是使用api提供的的message，但是这样就不能设置样式与自己的web应用风格统一了，还有就是使用iframe。实在不行就要等支持H5的7.0版本发布。</p>
-<pre><code>&lt;!DOCTYPE html&gt;
+<pre><code>
+&lt;!DOCTYPE html&gt;
+
 &lt;html&gt;
+
 &lt;head&gt;
+
     &lt;title&gt;skyline示例&lt;/title&gt;
+
     &lt;meta charset=&quot;utf-8&quot;&gt;
+
     &lt;script type=&quot;text/javascript&quot;&gt;
+
         var path=&quot;D:/a.fly&quot;
+
         function loadFlyfile(){
+
             globe.Project.Open(path);
+
         }
+
     &lt;/script&gt;
+
 &lt;/head&gt;
+
 &lt;body&gt;
+
     &lt;div id=&quot;map&quot;&gt;
+
         &lt;iframe id = &quot;iframe&quot; src=&quot;/frame.html&quot; style=&quot;z-index:1;position:absolute; width:25%;height:600px;&quot; &gt;&lt;/iframe&gt;
+
         &lt;object id=&quot;TerraExplorer3DWindow&quot; classid=&quot;CLSID:3a4f9192-65a8-11d5-85c1-0001023952c1&quot; style=&quot;width:800px;height:600px;&quot;/&gt;
+
         &lt;object id=&quot;globe&quot; classid=&quot;clsid: 3A4F9199-65A8-11D5-85C1-0001023952C1&quot; style=&quot;visibility: hidden;&quot; /&gt;
+
     &lt;/div&gt;
+
 &lt;/body&gt;
+
 &lt;/html&gt;
 </code></pre><p>iframe页面</p>
-<pre><code>&lt;!DOCTYPE html&gt;
+<pre><code>
+&lt;!DOCTYPE html&gt;
+
 &lt;html&gt;
+
 &lt;head&gt;
+
     &lt;title&gt;iframe&lt;/title&gt;
+
 &lt;/head&gt;
+
 &lt;body&gt;
+
     &lt;div style=&quot;width:100%;height:100%;backgroundcolor:red&quot;&gt;&lt;/div&gt;
+
 &lt;/body&gt;
+
 &lt;/html&gt;
 </code></pre>
           
